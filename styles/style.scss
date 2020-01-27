@@ -1,0 +1,44 @@
+/*
+Project Name: Analog Clock
+Client: N/A
+Author: Trin3232 (GitHub)
+*/
+
+/********************Fonts & Variables ****************************/
+
+@import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
+
+/*********************Main Body Styles**************************************/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Bangers", cursive;
+  font-size: 1.5rem;
+}
+
+body {
+  background: -moz-radial-gradient(
+    circle,
+    rgba(172, 32, 236, 1) 12%,
+    rgba(252, 204, 70, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(172, 32, 236, 1) 12%,
+    rgba(252, 204, 70, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(172, 32, 236, 1) 12%,
+    rgba(252, 204, 70, 1) 100%
+  );
+  .clock {
+    width: 500px;
+    height: 500px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    border: 5px solid black;
+    position: relative;
+  }
+}
