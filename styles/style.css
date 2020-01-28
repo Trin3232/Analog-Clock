@@ -5,6 +5,10 @@ Author: Trin3232 (GitHub)
 */
 /********************Fonts & Variables ****************************/
 @import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
+:root {
+  --rotation: 0;
+}
+
 /*********************Main Body Styles**************************************/
 *,
 *::after,
@@ -17,6 +21,17 @@ Author: Trin3232 (GitHub)
 
 body {
   background: radial-gradient(circle, #ac20ec 12%, #fccc46 100%);
+  min-height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .clock {
@@ -26,5 +41,104 @@ body .clock {
   border-radius: 50%;
   border: 5px solid black;
   position: relative;
+}
+
+body .clock .number {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transform: rotate(var(--rotation));
+          transform: rotate(var(--rotation));
+}
+
+body .clock .num1 {
+  --rotation: 30deg;
+}
+
+body .clock .num2 {
+  --rotation: 60deg;
+}
+
+body .clock .num3 {
+  --rotation: 90deg;
+}
+
+body .clock .num4 {
+  --rotation: 120deg;
+}
+
+body .clock .num5 {
+  --rotation: 150deg;
+}
+
+body .clock .num6 {
+  --rotation: 180deg;
+}
+
+body .clock .num7 {
+  --rotation: 210deg;
+}
+
+body .clock .num8 {
+  --rotation: 240deg;
+}
+
+body .clock .num9 {
+  --rotation: 270deg;
+}
+
+body .clock .num10 {
+  --rotation: 300deg;
+}
+
+body .clock .num11 {
+  --rotation: 330deg;
+}
+
+body .clock .hand {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  z-index: 10;
+  -webkit-transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+          transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+body .clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+body .hand.second {
+  width: 4px;
+  height: 45%;
+  background-color: red;
+}
+
+body .clock .hand.minute {
+  width: 9px;
+  height: 40%;
+  background-color: black;
+}
+
+body .clock .hand.hour {
+  width: 12px;
+  height: 35%;
+  background-color: black;
 }
 /*# sourceMappingURL=style.css.map */
