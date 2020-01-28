@@ -110,35 +110,35 @@ body .clock .hand {
           transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
 
-body .clock::after {
-  content: "";
-  position: absolute;
-  background-color: black;
-  z-index: 11;
-  width: 15px;
-  height: 15px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
 body .hand.second {
   width: 4px;
   height: 45%;
-  background-color: red;
+  background-color: #ad08f9;
 }
 
 body .clock .hand.minute {
-  width: 9px;
+  width: 10px;
   height: 40%;
   background-color: black;
 }
 
 body .clock .hand.hour {
-  width: 12px;
+  width: 13.5px;
   height: 35%;
   background-color: black;
+}
+
+body .clock::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  z-index: 11;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 /*# sourceMappingURL=style.css.map */

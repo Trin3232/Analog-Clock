@@ -102,31 +102,31 @@ body {
       transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
     }
   }
+  .hand.second {
+    width: 4px;
+    height: 45%;
+    background-color: #ad08f9;
+  }
+  .clock .hand.minute {
+    width: 10px;
+    height: 40%;
+    background-color: black;
+  }
+  .clock .hand.hour {
+    width: 13.5px;
+    height: 35%;
+    background-color: black;
+  }
   .clock::after {
     content: "";
     position: absolute;
     background-color: black;
     z-index: 11;
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-  }
-  .hand.second {
-    width: 4px;
-    height: 45%;
-    background-color: red;
-  }
-  .clock .hand.minute {
-    width: 9px;
-    height: 40%;
-    background-color: black;
-  }
-  .clock .hand.hour {
-    width: 12px;
-    height: 35%;
-    background-color: black;
   }
 }
